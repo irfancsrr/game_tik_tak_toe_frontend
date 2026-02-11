@@ -1,0 +1,157 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh;
+}
+
+.home-container img {
+    width: 500px; /* Adjust image width as needed */
+    height: 500px; /* Adjust image height as needed */
+    margin-left: 200px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.play-online, .play-computer {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 20px 24px; /* Increased padding for better visual appearance */
+    margin: 15px;
+    border-radius: 8px; /* Increased border radius for smoother edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+.play-online:hover, .play-computer:hover {
+    background-color: #0056b3;
+}
+
+.play-computer {
+    background-color: #555; /* Changed color for "Play Computer" button */
+}
+
+.play-computer:hover {
+    background-color: #333; /* Darker color on hover for "Play Computer" button */
+}
+
+.footer {
+    /* display: none; */
+    position: fixed;
+    bottom: 0;
+    /* margin-top: 100px; */
+    width: 100%;
+    color: #f8f9fa; 
+    text-align: right; 
+    padding-right: 70%; 
+}
+
+  .footer p {
+    font-size: 13px;
+  }
+
+  .footer a {
+    color: inherit;
+    font-weight: bold;
+}
+
+@media (max-width:700px) {
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    /* border: 2px solid red; */
+    height: auto;
+}
+
+.home-container img {
+    /* border: 2px solid yellow; */
+    width: 280px ; /* Adjust image width as needed */
+    height: auto; /* Adjust image height as needed */
+    margin-left: 0;
+}
+
+.text-container {
+    display: flex;
+    text-align: center;
+    width: auto;;
+    /* border: 2px solid aqua; */
+    flex-direction: column;
+    color: #fff;
+}
+.text-container h1{
+    font-size: x-large;
+    /* border: 2px solid yellow; */
+}
+.text-container p{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid yellow; */
+
+    font-size: large;
+}
+.play-online, .play-computer {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 20px 24px; /* Increased padding for better visual appearance */
+    margin: 15px;
+    border-radius: 8px; /* Increased border radius for smoother edges */
+    cursor: pointer;
+    transition: all 0.0.3s ease; /* Smooth transition effect */
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+.play-online:hover, .play-computer:hover {
+    background-color: #0056b3;
+}
+.play-online:active, .play-computer:active {
+    transform: scale(0.73);
+}
+
+.play-computer {
+    background-color: #555; /* Changed color for "Play Computer" button */
+}
+
+.play-computer:hover {
+    background-color: #333; /* Darker color on hover for "Play Computer" button */
+}
+
+.footer {
+    /* border: 2px solid greenyellow; */
+    position: relative;
+    bottom: 0;
+
+    width: auto;
+
+    color: #f8f9fa; 
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    text-align: center; 
+    padding-right: 0; 
+}
+
+  .footer p {
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid burlywood; */
+    font-size: 13px;
+  }
+
+  .footer a {
+    color: inherit;
+    font-weight: bold;
+    font-size: small;
+}    
+}

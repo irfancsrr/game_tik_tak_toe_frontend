@@ -1,0 +1,66 @@
+.Mobilebar{
+  display: none;
+
+  /* border: 2px solid red; */
+  align-items: center;
+  justify-content: space-between;
+  height: 7%;
+  overflow: hidden;
+  transition: all 2s ease;
+  background-color: #0f1B21;
+}
+a{
+    color: aliceblue;
+}
+.menu-button{
+    color: aliceblue;
+    margin-right: 0.4em;
+    /* border: 2px solid yellow; */
+    
+    font-size: 46px;
+    
+}
+.logo{
+    /* border: 2px solid red; */
+    margin-bottom:1%  !important;
+
+    margin-bottom:-1%  !important;
+        width: 150px;
+}
+
+.logo img{
+    /* border: 2px solid yellow; */
+
+    width: 150px;;
+}
+.menu-list{
+    /* border: 2px solid aqua; */
+
+    position: absolute;
+    top:12%;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    z-index: 200000 !important;
+   background-color: #0f1B21;
+    align-items: center;
+    left: 0;
+    height: auto;
+    width: 98%;
+}
+.menu-list a{
+    text-decoration: none;
+    display: block;
+    font-size: x-large;
+
+    /* border: 2px solid gray; */
+    margin: 13px 0px 20px 0px;
+}
+
+
+@media (max-width:700px) {
+    .Mobilebar{
+        display: flex;
+    }
+}
