@@ -1,7 +1,7 @@
 import { createContext, useReducer, useEffect } from 'react';
 
 export const AuthContext = createContext();
-const url='http://localhost:4000';
+const url='https://game-tik-tak-toe-backend.onrender.com';
 
 export const authReducer = (state, action) => {
   switch (action.type) {

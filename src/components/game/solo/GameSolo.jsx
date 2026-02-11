@@ -7,7 +7,7 @@ import PlaySound from '../../../sounds/play.mp3'
 import LoseSound from '../../../sounds/lose.mp3'
 import WinSound from '../../../sounds/won.mp3'
 
-const apiUrl = 'http://127.0.0.1:5000';
+const apiUrl = 'https://game-tik-tak-toe-backend-1.onrender.com';
 
 const GameSolo = ({ difficulty }) => {
     let data = ["", "", "", "", "", "", "", "", ""];

@@ -10,7 +10,7 @@ function GameQueue() {
 
   useEffect(() => {
     // Connect to backend server (port 4000)
-    socket.current = io("http://localhost:4000");
+    socket.current = io("https://game-tik-tak-toe-backend.onrender.com");
 
     // Join queue
     socket.current.emit('joinQueue');

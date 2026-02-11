@@ -10,7 +10,7 @@ const GameChat = ({ room, user }) => {
     const referense=useRef();
 
     useEffect(() => {
-        const socket = io("http://localhost:4000");
+        const socket = io("https://game-tik-tak-toe-backend.onrender.com");
         setSocket(socket);
 
         const audio = new Audio(messageSound);
