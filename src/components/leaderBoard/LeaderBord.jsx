@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; 
 import './LeaderBoard.css';
+import { useAuthContext } from '../authentication/hooks/useAuthContext';
 
 const LeaderBoard = () => {
     const [leaderboardData, setLeaderboardData] = useState([]); // State to hold leaderboard data
-
+    const {url}=useAuthContext();
     useEffect(() => {
         const fetchLeaderboardData = async () => {
             try {
-                const response = await axios.post('/api/user/leaderboard'); 
+                const response = await axios.post(`${url}/api/user/leaderboard`); 
                 setLeaderboardData(response.data);
             } catch (error) {
                 console.error('Error fetching leaderboard data:', error);
