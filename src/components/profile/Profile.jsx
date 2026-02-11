@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './Profile.css'; 
 import Chart from './ChartProfile';
+import { useAuthContext } from '../authentication/hooks/useAuthContext';
 
 function Profile() {
   const [userData, setUserData] = useState(null);
   const navigate = useNavigate(); 
-
+  const {url}=useAuthContext();
   const handleEditProfile = () => {
     navigate('/editprofile'); 
   };
@@ -14,7 +15,7 @@ function Profile() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/user/getUser', {
+        const response = await fetch(`${url}/api/user/getUser`, {
           method: "POST",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username: JSON.parse(localStorage.getItem('user')).username }) // Set the username in the body
