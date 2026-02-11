@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import PlaySound from '../../../sounds/play.mp3'
 import LoseSound from '../../../sounds/lose.mp3'
 import WinSound from '../../../sounds/won.mp3'
+import GameLoader from '../../gameLoader/GameLoader';
 
 const apiUrl = 'https://game-tik-tak-toe-backend-1.onrender.com';
 
@@ -109,7 +110,9 @@ const won = () => {
 
 
     return (
-        <div className='boardContainer sologame-margin-top'>
+       (!gameStarted?
+        <GameLoader/>:
+         <div className='boardContainer sologame-margin-top'>
             <h1 className='title' ref={titleRef}>Tic Tac Toe</h1>
             <div className='board'>
                 <div className='row1'>
@@ -130,6 +133,7 @@ const won = () => {
             </div>
             {end && <button className='reset' onClick={() => { navigate('/') }}>Exit</button>}
         </div>
+       )
     );
 };
 

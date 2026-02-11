@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLogin } from "../hooks/useLogin"; 
 import './Auth.css'
 import { useNavigate } from 'react-router-dom';
+import GameLoader from "../../gameLoader/GameLoader";
 
 
 const Login = () => {
@@ -24,9 +25,10 @@ const Login = () => {
     }, [redirect, navigate]);
 
     return (
-        <form className="login" onSubmit={ handleSubmit }>
+        (isLoading?<GameLoader/>:
+            <form className="login" onSubmit={ handleSubmit }>
             <h1>Login:</h1>
-
+             
             <input 
                 type="text"  
                 onChange={(e) => setUsername(e.target.value)} 
@@ -47,8 +49,10 @@ const Login = () => {
 
             <button disabled={ isLoading }>Login</button>
 
+
             {error && <div className="error">{ error }</div>}
         </form>
+        )
     )
 }
 

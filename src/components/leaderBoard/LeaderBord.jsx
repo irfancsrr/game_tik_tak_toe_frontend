@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'; 
 import './LeaderBoard.css';
 import { useAuthContext } from '../authentication/hooks/useAuthContext';
+import GameLoader from '../gameLoader/GameLoader';
 
 const LeaderBoard = () => {
     const [leaderboardData, setLeaderboardData] = useState([]); // State to hold leaderboard data
@@ -18,9 +19,12 @@ const LeaderBoard = () => {
 
         fetchLeaderboardData();
     }, []); 
+    
 
     return (
-        <div className='leaderBoardContainer'>
+        (leaderboardData.length==0?
+            <GameLoader/>:
+            <div className='leaderBoardContainer'>
             <main className="main">
                 <div className="header">
                     <h1 className="leaderBoardTitle">Ranking</h1>
@@ -41,6 +45,7 @@ const LeaderBoard = () => {
                 </div>
             </main>
         </div>
+        )
         
     );
 }

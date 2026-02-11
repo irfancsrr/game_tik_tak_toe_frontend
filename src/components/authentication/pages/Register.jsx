@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useRegister } from "../hooks/useRegister";
 import { useNavigate } from 'react-router-dom';
+import GameLoader from "../../gameLoader/GameLoader";
+
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -23,7 +25,8 @@ const Register = () => {
     }, [redirect, navigate]);
 
     return (
-        <form className="login" onSubmit={ handleSubmit }>
+     (isLoading?<GameLoader/>:
+           <form className="login" onSubmit={ handleSubmit }>
             <h1>Register:</h1>
 
             <input 
@@ -53,9 +56,11 @@ const Register = () => {
             <br/>
 
             <button disabled={ isLoading }>Register</button>
+           
 
             {error && <div className="error">{ error }</div>}
         </form>
+     )
     )
 }
 

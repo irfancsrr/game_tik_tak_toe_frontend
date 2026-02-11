@@ -14,6 +14,7 @@
   import EditProfile from './components/profile/EditProfile';
   import GameLog from './components/game/log/GameLog';
 import Mobilebar from './components/menu/Mobilebar';
+// import GameLoader from './components/gameLoader/GameLoader';
 
   function App() {
     const isAuth = localStorage.getItem('user')
@@ -30,6 +31,7 @@ import Mobilebar from './components/menu/Mobilebar';
                 path="/"
                 element={<Home />}
               />
+
               <Route 
                 path="/leaderboard"
                 element={<LeaderBoard />}
