@@ -16,7 +16,9 @@ const Register = () => {
 
     useEffect(() => {
         if (redirect) {
-            navigate('/'); 
+            // navigate('/'); 
+            window.location.replace('/');
+
         }
     }, [redirect, navigate]);
 

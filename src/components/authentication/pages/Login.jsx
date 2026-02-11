@@ -18,7 +18,8 @@ const Login = () => {
 
     useEffect(() => {
         if (redirect) {
-            navigate('/'); 
+            // navigate('/'); 
+            window.location.replace('/');
         }
     }, [redirect, navigate]);
 
